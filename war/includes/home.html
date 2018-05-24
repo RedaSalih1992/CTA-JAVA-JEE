@@ -1,0 +1,23 @@
+<div class="resultsList" >
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" dir-paginate="list in listHebs | filter:recherche | itemsPerPage: pageSize" current-page="currentPage" pagination-id="drinksPagination">
+            <a href="#/detail/{{list.id}}" class="card" ng-click="getHebergement(list.id)">
+                <div class="figure">
+                    <img src="images/prop/1-1.png" alt="image">
+                    <div class="figView"><span class="icon-eye"></span></div>
+                </div>
+                <h2>{{list.hebergement}}</h2>
+                <div class="cardAddress"><span class="icon-pointer"></span>{{list.adresse}} {{list.province}}</div>
+                <div class="cardRating">
+                    Catégorie : {{list.classement}}
+                </div>
+                <ul class="cardFeat">
+                    <li><span class="fa fa-phone"></span> {{list.tel}}</li>
+                </ul>
+                <div class="clearfix"></div>
+            </a>
+        </div>
+        <div class="clearfix"></div>
+        <dir-pagination-controls boundary-links="true" template-url="includes/dirPagination.tpl.html" pagination-id="drinksPagination"></dir-pagination-controls>
+</div>
+<div class="clearfix"></div>
